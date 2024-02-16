@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="loggo.png">
+    <title>Drei Espejo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oswald:wght@500&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<header id="headbar">
+    <div class="logo" src="loggo.png" alt="logo ni dri"></div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="container">
+        <div class="leftDiv">
+            <p id="greet">Hello I am!</p>
+            <h1 id="name">Drei Espejo</h1>
+            <h3>A proud student of DLL</h3>
+            <p id ="desc">A students who's only not a student but also a prodigy when it comes to TFT. Comp I run most of the time is pentakill .</p>
+        </div>
+        <div class="rightDiv">
+            <img id="Avatar" src="asda.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="Ttext">
+        <h1>About Me</h1>
+    </div>
+    <div id="abtDiv">
+        <h1>Personal Information</h1>
+        <p><i class="icon fas fa-user"></i><strong>Name:</strong> John Doe</p>
+        <p><i class="icon fas fa-envelope"></i><strong>Email:</strong> johndoe@example.com</p>
+        <p><i class="icon fas fa-phone"></i><strong>Phone:</strong> 123-456-7890</p>
+        <p><i class="icon fas fa-map-marker-alt"></i><strong>Location:</strong> New York City, USA</p>
+        <p><i class="icon fas fa-briefcase"></i><strong>Occupation:</strong> Web Developer</p>
+    </div>
+    
+</section>
+
+<section id="projects">
+    <div class="Ttext">
+        <h1>Portfolio</h1>
+    </div>
+    <div class="container">
+        <div class="proj">
+            <img src="aa.png" alt="Pet Shop ni Dri">
+            <div class="projbar">
+                <div class="projtitle">
+                    <h3>Pet Shop ni Dri</h3>
+                </div>
+                <div class="projbtn">
+                    <a href="https://doidrei.github.io/Landing-Page/" class="buttons" target="window">Live Demo</a>
+                    <a href="https://github.com/DoiDrei/Landing-Page" class="buttons" target="window">Source Code</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more project entries here -->
+    </div>
+</section>
+
+<section id="contact">
+    <div class="Ttext">
+        <h1>Contact Me</h1>
+    </div>
+    <div id="contactDiv">
+        <h1>WORK IN PROGRESS...</h1>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.getElementById("headbar");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 50) {
+    navbar.style.backgroundColor = "#111";
+    navbar.style.borderBottomColor = "#222";
+} else {
+    navbar.style.backgroundColor = "transparent";
+    navbar.style.borderBottomColor = "transparent";
+}
+
+        });
+    });
+    window.addEventListener('scroll', function() {
+        const abtDiv = document.getElementById('abtDiv');
+        const abtDivPosition = abtDiv.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+        
+        if (abtDivPosition < screenHeight * 0.55) {
+            abtDiv.classList.add('show');
+        }
+    });
+    document.getElementById('abtDiv').addEventListener('click', function() {
+        alert('Yes thats me alright, I got nothing else to reveal :D');
+    });
+</script>
+</body>
+</html>
